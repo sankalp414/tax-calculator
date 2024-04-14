@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Tax Calculator</h2>
+        </div>
+        <form id="form" class="form">
+            <div class="form-control">
+                <label for="income">Enter Gross annual income </label>
+                 
+                
+                <input type="text"  id="income" />
+                <span class="tooltip" data-tooltip="Enter a valid input">
+                    <i class="fas fa-exclamation-circle" ></i>
+                </span>
+            </div>
+            <div class="form-control">
+                <label for="income">Enter extra income</label>
+                
+                <input type="text" placeholder="Enter extra income" id="extraIncome" />
+                <div class="tooltip" data-tooltip="Enter valid input"><i class="fas fa-exclamation-circle" ></i></div>
+            </div>
+            <div class="form-control">
+                <label for="income">Enter age Group </label>
+                
+                <!-- <input type="text" placeholder="Password" id="ageGroup"/> -->
+                <select id="ageGroup" name="age" required>
+                    <option value=0>Select</option>
+                    <option value=40>&lt;40</option>
+                    <option value=50>&ge;40 &lt;60</option>
+                    <option value=60>&ge;60</option>
+                  </select>
+                <div class="tooltip" data-tooltip="Enter valid input"><i class="fas fa-exclamation-circle" ></i></div>
+            </div>
+            <div class="form-control">
+                <label for="income">Enter total applicable deduction </label>
+               
+                <input type="text" placeholder="Total applicable deductions" id="totalDeduction"/>
+                <div class="tooltip" data-tooltip="Enter valid input"><i class="fas fa-exclamation-circle" ></i></div>
+                
+            </div>
+            <button id="openModal">Submit</button>
+            <div class="modal" id="modal">
+                <div class="modal-inner">
+                    <div id="results"></div>
+                    <button id="closeModal">Close Button</button>
+                </div>
+
+            </div>
+        </form>
+    </div>
+    
+    
+  
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
